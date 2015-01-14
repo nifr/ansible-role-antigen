@@ -1,0 +1,23 @@
+---
+
+galaxy_info:
+
+  description: A role to install antigen.
+
+  author:      Nicolai Fröhlich
+  company:     Nicolai Fröhlich
+  license:     MIT
+
+  min_ansible_version: 1.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+
+  categories:
+    - development
+    - system
+
+  dependencies: []
+
