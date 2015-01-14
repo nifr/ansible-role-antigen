@@ -11,12 +11,12 @@ The preferred way to install this role is through ansible-galaxy.
 defaults
 =========
 
-  antigen:
-    install:
-      user:   ~
-      global: false
-    path: $HOME/.local/share/antigen/antigen.zsh
-    url:  https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh
+    antigen:
+      install:
+        user:   ~
+        global: false
+      path: $HOME/.local/share/antigen/antigen.zsh
+      url:  https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh
 
 variables
 =========
