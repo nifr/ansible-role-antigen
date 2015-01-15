@@ -1,9 +1,14 @@
+---
+
 antigen_install_global: false
-antigen_file_owner:     "{{ 'root' if antigen_install_global else remote_user }}"
-antigen_file_path:      "~{{ antigen_file_owner }}/.local/share/antigen/antigen.zsh"
-antigen_file_group:     "{{ antigen_file_owner }}"
-antigen_file_mode:      "0700"
-antigen_download_url:   "https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh"
+antigen_file_owner:     '{{ "root" if antigen_install_global else "~" }}'
+antigen_file_path:      '~{{ antigen_file_owner }}/.local/share/antigen/antigen.zsh'
+antigen_file_group:     ~
+antigen_file_mode:      '{{ "0755" if antigen_install_global else "0700" }}'
+antigen_dir:            '{{ antigen_file_path|dirname|default("/", true) }}'
+antigen_dir_owner:      ~
+antigen_dir_group:      ~
+antigen_dir_mode:       ~
+antigen_download_url:   'https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh'
 antigen_download_force: false
-antigen_selfupdate:     true
 
