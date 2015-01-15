@@ -18,7 +18,6 @@ antigen_file_group:     {{ antigen_file_owner }}
 antigen_file_mode:      0700
 antigen_download_url:   https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh
 antigen_download_force: false
-antigen_selfupdate:     true
 
 variables
 =========
@@ -63,10 +62,6 @@ The URL where antigen should be downloaded from.
 **antigen_download_force** (bool)
 
 This setting configures wether antigen should be downloaded even if the file already exists.
-
-**antigen_selfupdate** (bool)
-
-Determines wether to run `antigen selfupdate` after the installation process.
 
 license
 =======
