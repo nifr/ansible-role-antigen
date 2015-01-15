@@ -11,13 +11,13 @@ The preferred way to install this role is through ansible-galaxy.
 defaults
 =========
 
-antigen_install_global: false
-antigen_file_owner:     ~
-antigen_file_path:      ~{{ antigen_file_owner }}/.local/share/antigen/antigen.zsh
-antigen_file_group:     {{ antigen_file_owner }}
-antigen_file_mode:      0700
-antigen_download_url:   https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh
-antigen_download_force: false
+    antigen_install_global: false
+    antigen_file_owner:     ~
+    antigen_file_path:      ~{{ antigen_file_owner }}/.local/share/antigen/antigen.zsh
+    antigen_file_group:     {{ antigen_file_owner }}
+    antigen_file_mode:      0700
+    antigen_download_url:   https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh
+    antigen_download_force: false
 
 variables
 =========
