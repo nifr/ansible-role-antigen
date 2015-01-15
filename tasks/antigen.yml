@@ -1,0 +1,29 @@
+---
+
+- include: antigen/create/dir.yml
+  tags:    [antigen, create, dir]
+
+- include: antigen/set/dir/owner.yml
+  tags:    [antigen, set, dir, owner]
+
+- include: antigen/set/dir/group.yml
+  tags:    [antigen, set, dir, group]
+
+- include: antigen/set/target-dir/mode.yml
+  tags:    [antigen, set, dir, mode]
+
+- include: antigen/download/file.yml
+  tags:    [antigen, download, file]
+
+- include: antigen/set/file/owner.yml
+  tags:    [antigen, set, file, owner]
+
+- include: antigen/set/file/group.yml
+  tags:    [antigen, set, file, group]
+
+- include: antigen/set/file/mode.yml
+  tags:    [antigen, set, file, mode]
+
+- include: antigen/selfupdate.yml
+  tags:    [antigen, selfupdate]
+
