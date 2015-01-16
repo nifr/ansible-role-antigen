@@ -1,0 +1,9 @@
+---
+
+- name: "antigen:set:dir:owner | Set the directory's user ownership "
+  file:
+    path:  '{{ item.dir }}'
+    user:  '{{ item.owner }}'
+    state: 'directory'
+  with_items:
+    - '{ "dir": "{{ antigen_dir }}", "owner": "{{ antigen_dir_owner|default("<not set>", true) }}" }'

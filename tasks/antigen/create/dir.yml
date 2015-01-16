@@ -1,0 +1,8 @@
+---
+
+- name: "antigen:create:target-dir | Ensure target target-dir exists "
+  file:
+    path:  '{{ item.dir }}'
+    state: 'directory'
+  with_items:
+    - '{ "dir": "{{ antigen_dir }}"}'

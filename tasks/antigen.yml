@@ -4,23 +4,29 @@
   tags:    [antigen, create, dir]
 
 - include: antigen/set/dir/owner.yml
+  when:    '( antigen_dir_owner|default(none, true) != none )'
   tags:    [antigen, set, dir, owner]
 
 - include: antigen/set/dir/group.yml
+  when:    '( antigen_dir_group|default(none, true) != none )'
   tags:    [antigen, set, dir, group]
 
 - include: antigen/set/dir/mode.yml
+  when:    '( antigen_dir_mode|default(none, true) != none )'
   tags:    [antigen, set, dir, mode]
 
 - include: antigen/download/file.yml
   tags:    [antigen, download, file]
 
 - include: antigen/set/file/owner.yml
+  when:    '( antigen_file_owner|default(none, true) != none )'
   tags:    [antigen, set, file, owner]
 
 - include: antigen/set/file/group.yml
+  when:    '( antigen_file_group|default(none, true) != none )'
   tags:    [antigen, set, file, group]
 
 - include: antigen/set/file/mode.yml
+  when:    '( antigen_dir_mode|default(none, true) != none )'
   tags:    [antigen, set, file, mode]
 

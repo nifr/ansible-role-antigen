@@ -1,0 +1,10 @@
+---
+
+- name: "antigen:set:file:group | Set the group ownership for the antigen file "
+  file:
+    path:  '{{item.file}}'
+    group: '{{item.group}}'
+    state: 'file'
+  with_items:
+    - '{ "group": "{{ antigen_file_group|default("<not set>", true) }}", "file": "{{ antigen_file_path }}" }'
+

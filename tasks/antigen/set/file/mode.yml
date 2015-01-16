@@ -1,0 +1,9 @@
+---
+
+- name: "antigen:set:file:mode | Set the file's mode "
+  file:
+    path:  '{{ item.file }}'
+    mode:  '{{ item.mode }}'
+    state: 'file'
+  with_items:
+    - '{ "mode": "{{ antigen_file_mode|default("<not set>", true) }}", "file": "{{ antigen_file_path }}" }'

@@ -1,0 +1,9 @@
+---
+
+- name: "antigen:set:dir:mode | Set the directory's mode "
+  file:
+    path:  '{{ item.dir }}'
+    mode:  '{{ item.mode }}'
+    state: 'directory'
+  with_items:
+    - '{ "mode": "{{ antigen_dir_mode|default("<not set>", true) }}", "dir": "{{ antigen_dir }}" }'

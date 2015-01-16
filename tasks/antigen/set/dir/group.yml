@@ -1,0 +1,10 @@
+---
+
+- name: "antigen:set:dir:group | Set the group ownership for the antigen directory "
+  file:
+    path:  '{{ item.dir }}'
+    group: '{{ item.group }}'
+    state: 'directory'
+  with_items:
+    - '{ "dir": "{{ antigen_dir }}", "group": "{{ antigen_dir_group|default("<not set>", true) }}" }'
+

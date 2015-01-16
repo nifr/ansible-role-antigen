@@ -1,0 +1,9 @@
+---
+
+- name: "antigen:set:file:owner | Set the file's user ownership "
+  file:
+    path:  '{{item.file}}'
+    owner: '{{item.user}}'
+    state: 'file'
+  with_items:
+    - '{ "user": "{{ antigen_file_owner|default("<not set>", true) }}", "file": "{{ antigen_file_path }}" }'

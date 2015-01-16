@@ -1,0 +1,8 @@
+---
+
+- name: "antigen:download:file | Download file archive to target target-dir "
+  get_url:
+    url:  '{{ item.url }}'
+    dest: '{{ item.target }}'
+  with_items:
+    - '{ "url": "{{ antigen_download_url }}", "target": "{{ antigen_file_path }}" }'
