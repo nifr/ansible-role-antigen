@@ -9,7 +9,7 @@
 - include: antigen/set/dir/group.yml
   tags:    [antigen, set, dir, group]
 
-- include: antigen/set/target-dir/mode.yml
+- include: antigen/set/dir/mode.yml
   tags:    [antigen, set, dir, mode]
 
 - include: antigen/download/file.yml
@@ -23,7 +23,4 @@
 
 - include: antigen/set/file/mode.yml
   tags:    [antigen, set, file, mode]
-
-- include: antigen/selfupdate.yml
-  tags:    [antigen, selfupdate]
 
